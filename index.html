@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessingGame</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="flex justify-center items-center bg-gray-700 w-[100%] h-[100vh]">
+        <div class="w-96 h-64 bg-gray-900 p-4 text-white rounded-sm card">
+            <div class="card-title flex justify-between items-center">
+                <div class="w-14 h-[1px] bg-slate-50">
+
+                </div>
+                <div>
+                    <h2 class="text-center text-white">guessingGame</h2>
+                </div>
+                <div class="w-14 h-[1px]  bg-slate-50">
+
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div class="text-xs flex justify-center mt-5">
+                  <form action="#">
+                    <label class="font-[10px]" for="gessingNumber">Guess a Number between (1 to 5)</label>
+                    <input type="number" id="gessingNumber" min="1" max="5" class="rounded-sm ml-2 bg-yellow-50 text-black pl-1 pr-2 focus:text-black border-gray-900 border-spacing-0" required><br>
+                    <button id="check" class="bg-yellow-500 text-center  hover:bg-slate-900 w-14 h-5 mt-3 transition duration-300 ease-in-out border-2 border-gray-400 hover:border-l-white" type="submit">check</button> 
+                </div> <br> <br>
+               <div class="text-center">
+                <p class="resultText  font-bold"></p> 
+                <p class="remainingAttems"></p>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
