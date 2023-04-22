@@ -24,15 +24,15 @@ lostWinMessage.style.fontSize = "12px"
 
 form.addEventListener("submit" , (e) => {
     e.preventDefault()
-    checkResult(gessingNumber.value);
+    // checkResult(gessingNumber.value);
     attems++;
     if(attems === 5){
         gessingNumber.disabled = true;
         check.disabled = true;
     }if(attems < 6){
-        const guessNumber = Number(gessingNumber.value)
+        let guessNumber = Number(gessingNumber.value)
         checkResult(guessNumber)
-        remainingAttems.innerHTML = `Remaining attems ${totalAttemts - attems}`
+        remainingAttems.innerHTML = `Remaining  ${totalAttemts - attems}`
     }
     gessingNumber.value = ""
     
@@ -46,7 +46,7 @@ const checkResult = (gessingNumber) => {
         resultText.innerHTML = `you have won`
         totalWins++;
     }else{
-        resultText.innerHTML = `you have lost . random number was : ${randomNumber}`
+        resultText.innerHTML = `you have lost . random number was : ${randomNumber}`;
         totallosts++;
     }
 
